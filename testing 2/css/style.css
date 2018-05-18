@@ -1,0 +1,214 @@
+/*----------- Base element Styles---------*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Varela Round", "Barlow", sans-serif;
+  line-height: 1.6;
+  color: #3a3a3a;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  font-size: .95em;
+  margin-bottom: 1.8em;
+}
+
+h2,
+a {
+  color: #000;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.port-title h2,
+.row10 h2 {
+  color: blue;
+}
+
+.port-title h2 {
+  margin-bottom: 2em;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  border-radius: 7px;
+}
+
+.row1 {
+  margin-top: 10px;
+}
+
+.row2,
+.row10 {
+  font-size: 1.3em;
+  font-family: "barlow"
+}
+
+h2,
+.row10 {
+  text-align: center;
+}
+
+.row {
+  text-align: justify;
+}
+
+/*----------Navigation-------*/
+
+
+.name {
+  font-size: 1.35em;
+  margin: 0;
+}
+
+.main-nav {
+  margin-top: 5px;
+}
+
+.name a,
+.main-nav a {
+  text-align: center;
+  display: block;
+  padding: 10px 15px;
+}
+
+.main-nav a {
+  font-size: .95em;
+  color: blue;
+  text-transform: uppercase;
+}
+
+.main-nav a:hover {
+  color: #284a59;
+  border-bottom-style: solid;
+}
+
+/*--------------Layout containers-------*/
+
+
+.main-header {
+  padding: .5em 5% 0.5em;
+  background-color: #ADD8E6;
+  width: 100%;
+}
+
+.col {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+.main-footer {
+  background-color: #ADD8E6;
+  margin-top: 30px;
+  padding: 0.5em 5% 0.5em;
+  text-align: center;
+  width: 100%;
+}
+
+
+/*--------------MEDIA QUERIES----------*/
+
+
+@media (max-width: 767.5px) {
+  .main-footer ul li:not(:last-child){
+    display: none;
+  }
+  .main-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;        /*some of the styles have been taken from MDN*/
+  }
+}
+
+
+@media (min-width: 768px) {
+  .row {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .main-header,
+  .main-footer,
+  .main-nav,
+  .row {
+    display: flex;                     /*some of the styles have been taken from MDN*/
+  }
+  .main-header {
+    flex-direction: column;
+    align-items: centre;
+    position: fixed;
+  }
+  .main-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .col {
+    flex: 50%;
+  }
+  .row {
+    flex-wrap: wrap;                    /*some of the styles have been taken from MDN*/
+  }
+
+  .row1,
+  .row2 {
+    margin-top: 150px;
+  }
+  .row2 {
+    order: -1;
+  }
+  .port-title {
+    flex: 100vw;
+  }
+
+  .main-footer ul li:last-child {
+    display: none;
+  }
+  #portfolio, #skills {
+    padding-top: 5em;
+  }
+}
+
+
+@media (min-width: 1024px) {
+
+  .row {
+    width: 90%;
+
+  }
+
+  .main-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .col {
+    flex-basis: 33.3%;
+  }
+
+  .row1,
+  .row2 {
+    flex: 50%;
+  }
+  .row10,
+  .port-title {
+    flex: 100%;
+  }
+  #portfolio, #skills {
+    padding-top: 3em;
+  }
+}
