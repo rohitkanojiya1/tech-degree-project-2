@@ -78,6 +78,7 @@ h2,
 
 .main-nav {
   margin-top: 5px;
+  margin: 0 auto;
 }
 
 .name a,
@@ -124,17 +125,6 @@ h2,
 /*--------------MEDIA QUERIES----------*/
 
 
-@media (max-width: 767.5px) {
-  .main-footer ul li:not(:last-child){
-    display: none;
-  }
-  .main-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;        /*some of the styles have been taken from MDN*/
-  }
-}
-
 
 @media (min-width: 768px) {
   .row {
@@ -145,8 +135,9 @@ h2,
   .main-footer,
   .main-nav,
   .row {
-    display: flex;                     /*some of the styles have been taken from MDN*/
-  }
+    display: flex;
+                     /*some of the styles have been taken from MDN*/
+}
   .main-header {
     flex-direction: column;
     align-items: centre;
